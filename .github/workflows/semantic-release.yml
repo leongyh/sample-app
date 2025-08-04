@@ -20,7 +20,7 @@ jobs:
         with:
           branches: |
             [
-              'main'
+              'main',
               {
                 name: 'dev',
                 prerelease: true
