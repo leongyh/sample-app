@@ -10,6 +10,8 @@ jobs:
   semantic-release:
     name: Semantic Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -17,3 +19,15 @@ jobs:
         uses: cycjimmy/semantic-release-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          branches: |
+            [
+              'main',
+              {
+                name: 'dev',
+                prerelease: true
+              }
+            ]
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/git
