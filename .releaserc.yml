@@ -1,6 +1,6 @@
 branches:
 - name: 'main'
-  prerelease: 'rc'
+  prerelease: 'alpha'
 - 'release-*'
 
 plugins:
