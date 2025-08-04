@@ -1,5 +1,6 @@
 branches:
 - name: 'main'
+  channel: 'rc'
   prerelease: 'rc'
 - 'release-*'
 
