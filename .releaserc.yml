@@ -1,9 +1,12 @@
 branches:
 - name: 'main'
   prerelease: 'alpha'
+  channel: 'core'
 - name: 'rc-*'
   prerelease: 'rc'
-- 'release-*'
+  channel: 'core'
+- name: 'release-*'
+  channel: 'core'
 
 plugins:
   - "@semantic-release/commit-analyzer"
