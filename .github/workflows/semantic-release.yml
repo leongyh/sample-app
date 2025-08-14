@@ -25,6 +25,8 @@ jobs:
         id: semantic-release
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+        with:
+          action: release-cut
       - name: echo outputs
         run: |
           echo next-version: ${{ steps.semantic-release.outputs.next-version }}
