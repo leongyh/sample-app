@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 jobs:
   release:
-    name: Semantic Release
+    name: Release
     runs-on: ubuntu-latest
     permissions:
       contents: write
